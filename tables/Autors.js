@@ -17,7 +17,7 @@ table.columns = {
 * */
 
 
-table.read.access = 'anonymous';
+table.read.access = 'authenticated';
 table.update.access = 'disabled';
 
 
