@@ -12,7 +12,7 @@ table.columns = {
 };
 
 
-table.dynamicSchema = true;
+
 
 /*
 *   Trigger para insert
@@ -20,11 +20,16 @@ table.dynamicSchema = true;
 * */
 
 table.insert(function (context) {
-    console.log("************************ " + context.user.id);
+
     context.item.usuario = context.user.id;
     return context.execute();
 });
 
+
+table.read(function (context) {
+    context.query.where({usuario : context.user.id});
+    return context.execute();
+});
 
 /*
 * Permisos de acceso a la tabla
