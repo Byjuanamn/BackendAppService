@@ -20,7 +20,8 @@ table.dynamicSchema = true;
 * */
 
 table.insert(function (context) {
-    context.item.idUsuario = context.user.id;
+    console.log("************************ " + context.user.id);
+    context.item.usuario = context.user.id;
     return context.execute();
 });
 
