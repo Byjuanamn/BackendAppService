@@ -8,7 +8,8 @@ var table = azureMobileApps.table();
 
 table.columns = {
     "name" : "string",
-    "secondName": "string"
+    "secondName": "string",
+    "published": "string"
 };
 
 
